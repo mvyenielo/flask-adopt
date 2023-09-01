@@ -6,12 +6,13 @@
 
 
 <div class="pet-profile-info">
-  {% if pet.photo_url %}<img src="{{ pet.photo_url }}"> {% endif %}
+  {% if pet.photo_url %}<img class="pet-image" src="{{ pet.photo_url }}"> {% endif %}
   <h2>{{ pet.name }}</h2>
   <p>Age: {{ pet.age }}</p>
   <p>Species: {{ pet.species }}</p>
 </div>
 
+<h2>Edit Pet Details</h2>
 <form id="pet-edit-form" method="POST" action="/{{ pet.id }}">
   {{ form.hidden_tag() }}
 
@@ -30,6 +31,7 @@
 
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>
+<a class="btn btn-secondary" href="/">Home</a>
 
 
 
