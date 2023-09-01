@@ -7,20 +7,20 @@
 {% for pet in pets %}
 <div class="pet-info">
   <div class="pet-image">
-    <img src="pet.image_url">
+    <img src="{{ pet.photo_url }}">
   </div>
 
   <div class="pet-name">
     <p>
-      {{ pet.name }}
-      {% if pet.available is True %}
+      <a href="/{{ pet.id }}">{{ pet.name }}</a>
+      {% if pet.available == True %}
         <b> is available! </b>
       {% endif %}
     </p>
   </div>
 </div>
-{% endfor%}
+{% endfor %}
 
 <a class="btn btn-primary" href="/add">Add a Pet</a>
 
-{% end block %}
+{% endblock %}

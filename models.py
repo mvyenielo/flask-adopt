@@ -31,7 +31,7 @@ class Pet(db.Model):
         default=''
     )
 
-    species = db.Column(
+    age = db.Column(
         db.String(30),
         nullable=False
     )
